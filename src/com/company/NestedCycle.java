@@ -4,20 +4,28 @@ public class NestedCycle {
 
     public static void main(String[] args) {
         NestedCycle ns=new NestedCycle();
-        int size=5;
+        int size=7;
         System.out.println("Реализовать программу которая выводит в консоли прямоугольник из символов #");
         ns.a(size);
         System.out.println("!---------------------------------------------!");
         System.out.println("Реализовать программу, которая рисует следующие фигуры (на выбор 2-3, но можно и все при желании):");
-        ns.bA(8);
+        ns.bA(size);
         System.out.println("!---------------------------------------------!");
-        ns.bB(8);
+        ns.bB(size);
         System.out.println("!---------------------------------------------!");
-        ns.bC(8);
+        ns.bC(size);
         System.out.println("!---------------------------------------------!");
-        ns.bD(8);
+        ns.bD(size);
         System.out.println("!---------------------------------------------!");
-        ns.bE(8);
+        ns.bE(size);
+        System.out.println("!---------------------------------------------!");
+        ns.bF(size);
+        System.out.println("!---------------------------------------------!");
+        ns.bG(size);
+        System.out.println("!---------------------------------------------!");
+        ns.bH(size);
+        System.out.println("!---------------------------------------------!");
+        ns.bI(size);
     }
 
     public void a(int size){
@@ -85,6 +93,91 @@ public class NestedCycle {
                     }else{
                         System.out.print(" ");
                     }
+                }
+
+            }
+            System.out.println("");
+        }
+    }
+
+    public void bF(int size){                             // Task b(F)
+        for(int i=0;i<size;i++){
+            for(int j=0;j<size;j++){
+                if(i==0 || i==size-1){
+                    System.out.print("#");
+                }else{
+                    if(i==j){
+                        System.out.print("#");
+                    }else
+                    {
+                        System.out.print(" ");
+                    }
+                }
+
+
+            }
+            System.out.println("");
+        }
+    }
+
+    public void bG(int size){                             // Task b(G)
+        for(int i=0;i<size;i++){
+            for(int j=0;j<size;j++){
+                if(i==0 || i==size-1){
+                    System.out.print("#");
+                }else{
+                    if((i+j)==size-1){
+                        System.out.print("#");
+                    }else
+                    {
+                        System.out.print(" ");
+                    }
+                }
+
+
+            }
+            System.out.println("");
+        }
+    }
+
+    public void bH(int size){                             // Task b(H)
+        for(int i=0;i<size;i++){
+            for(int j=0;j<size;j++){
+                if(i==0 || i==size-1){
+                    System.out.print("#");
+                }else{
+                    if((i+j)==size-1 || i==j){
+                        System.out.print("#");
+                    }else
+                    {
+                        System.out.print(" ");
+                    }
+                }
+
+
+            }
+            System.out.println("");
+        }
+    }
+
+    public void bI(int size){                             // Task b(I)
+        for(int i=0;i<size;i++){
+            for(int j=0;j<size;j++){
+                if(i==0 || i==size-1){
+                    System.out.print("#");
+                }else{
+                    if((i+j)==size-1 || i==j){
+                        System.out.print("#");
+                    }else
+                    {
+                        if(j==0 || j==size-1){
+                            System.out.print("#");
+                        }else{
+                            System.out.print(" ");
+                        }
+
+                    }
+
                 }
 
             }
